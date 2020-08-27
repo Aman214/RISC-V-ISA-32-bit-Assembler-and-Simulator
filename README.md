@@ -7,4 +7,4 @@ The project was of 2 parts:
 1. To convert the RISC code into machine level opcodes and also store them into memory which is a text file for this project.
 2. To read the opcodes and process them as a pipeline would do and also print some statistics.
 
-Each part has its own readme which briefly explain how evryone in the tea divided the tasks and how to run the code.
+Each part has its own readme which briefly explain how everyone in the team divided the tasks and how to run the code.
