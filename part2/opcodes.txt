@@ -1,0 +1,61 @@
+instruction		opcode		func3	func7	Code	status
+lb 			3		0	x	1	d
+lh			3		1		2	d
+lw			3		2		3	d
+ld			3		3		4	
+lbu			3		4		5	d
+lhu			3		5		6	d
+lwu			3		6		7	d
+fence			15		0		8
+fence.i			15		1		9
+addi			19		0		10	d
+slli			19		1	0	11	d
+slti			19		2		12	d
+sltiu			19		3		13	d
+xori			19		4		14	d
+srli			19		5	0	15	d
+srai			19		5	32	16	d
+ori			19		6		17	d
+andi			19		7		18	d
+auipc			23				19	d
+addiw			27		0		20	d
+slliw			27		1	0	21	d
+srliw			27		5	0	22	d
+sraiw			27		5	32	23	d
+sb			35		0		24	d
+sh			35		1		25	d
+sw			35		2		26	d
+sd			35		3		27	d
+add			51		0	0	28	d
+sub			51		0	32	29	d
+sll			51		1	0	30	d
+slt			51		2	0	31	d
+sltu			51		3	0	32	d
+xor			51		4	0	33	d
+srl			51		5	0	34	d
+sra			51		5	32	35	d
+or			51		6	0	36	d
+and			51		7	0	37	d
+lui			55				38	
+addw			55		0	0	39	d
+subw			55		0	32	40	d
+sllw			55		1	0	41	d
+srlw			55		5	0	42	d
+sraw			55		5	32	43	d
+beq			99		0		44	d
+bne			99		1		45	d
+blt			99		4		46	d
+bge			99		5		47	d
+bltu			99		6		48	d
+bgeu			99		7		49	d
+jalr			103		0		50	d
+jal			111				51	d
+
+
+
+R=28-37,39-43
+I=1-18,20-23,27,50
+SB=44-49,
+S=24-26
+UJ-51
+U=19,38

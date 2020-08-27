@@ -1,0 +1,40 @@
+#aman kumar
+#2017csb1067
+
+.data 
+var: .word 0x10001000
+var1: .word 3 ,35 ,51,19,99,111
+num: .word 6
+
+
+.text
+la x7 , var1
+#la x6, var1
+lw x9, num
+addi , x10,x0,0
+addi ,x9,x9,-1
+loop1:
+ blt x9 , x10 , EXIT 
+ addi x8 , x0,0 #j=0
+ addi x5,x9,0
+ sub x5,x5,x10 #n-i-1
+ addi x10,x10,1
+ loop2:
+ blt x5,x8,loop1 # check n-i-1<j or not
+ addi x11 ,x8,0
+ slli x11,x11,2
+ add x11,x11,x7  # x11=&a[j]
+ addi x12,x11,4
+ add x12,x12,x7  # x12=&a[j+1]
+ 
+  lw x13, 0(x11)  #x13=a[j]
+  lw x14 ,0(x12)   #x14=a[j+1]
+  addi x8,x8,1  #j=j+1
+  blt x13 ,x14 ,loop2
+  sw x13 0(x12)       #a[j+1]=a[j]
+  sw x14 0(x11)      #a[j]=a[j+1]
+  beq x0,x0,loop2
+ beq x0,x0,loop1
+ 
+EXIT:
+

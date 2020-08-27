@@ -1,0 +1,21 @@
+addi x10  x0  5
+jal x1 fact
+jal x1 EXIT
+fact:
+addi sp  sp  -8 
+sw x1  4(sp) 
+sw x10  0(sp) 
+addi x5  x10  -1 
+bge x5  x0  L1 
+addi x10  x0  1 
+jalr x0  0(x1) 
+L1:
+addi x10  x10  -1 
+jal x1  fact 
+addi sp  sp  8 
+addi x6  x10  0 
+lw x10  0(sp) 
+lw x1  4(sp) 
+add x10  x10  x6 
+jalr x0  0(x1) 
+EXIT:

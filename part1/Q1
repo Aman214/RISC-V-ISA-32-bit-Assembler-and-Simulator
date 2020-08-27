@@ -1,0 +1,25 @@
+#aman kumar
+#2017csb1067
+
+.data 
+var: .word 0x10001000
+var1: .word 3 ,35 ,51,19,99,111
+var2: .word 0 ,4
+var3: .word 0,32
+var4: .word 0x7f
+
+.text
+lw x7,var
+lw x6,0(x7)
+la x5 , var1
+la x28 , var2
+la x29 , var3
+lw x11, var4
+addi x30,x0,6
+addi x31,x0,2
+
+addi x10 ,x0,0
+and x8,x6,x11   # extracted 7 bit
+loop:
+ 
+
