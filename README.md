@@ -1,6 +1,6 @@
 # RISC-V-ISA-32-bit-Assembler-and-Simulator
 
-This was a group project of 5 for an academic course called Computer Architecture. The project is related to creating a simulator which will read codes written in RISC-V ISA and can simulate how it is processed in a system. This being one of my first large projects, was done without much documentation as I was not enough better at coding then. But still it adds into my experience being doing a large code and connect different functionalities.
+This was a group project of 5 for an academic course called Computer Architecture. The project is related to creating a simulator which will read codes written in RISC-V ISA and can simulate how it is processed in a system. This being one of my first large projects, was done without much documentation. It adds into my experience being doing a large code and connect different functionalities.
 
 The project was of 2 parts:
 
